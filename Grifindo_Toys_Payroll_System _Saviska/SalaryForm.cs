@@ -17,7 +17,7 @@ namespace Grifindo_Toys_Payroll_System__Saviska
         {
             InitializeComponent();
             
-           
+          
             FirstNameText.ReadOnly = true;
             LastNameText.ReadOnly = true;
             PassportNoText.ReadOnly = true;
@@ -34,6 +34,7 @@ namespace Grifindo_Toys_Payroll_System__Saviska
             BaseSalaryText.ReadOnly = true;
             OTText.ReadOnly = true;
             GrossPayText.ReadOnly = true;
+            OverallAttendanceText.ReadOnly = true;
 
 
         }
@@ -223,6 +224,29 @@ namespace Grifindo_Toys_Payroll_System__Saviska
             M.ShowDialog();
         }
 
+        private void CalculateAttendance_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float OverallAttendanceZ, DateRangeZ, AbsentDaysZ, LeavesZ, HolidaysZ;
+                DateRangeZ = float.Parse(DateRangeText.Text);
+                LeavesZ = float.Parse(LeavesTakenText.Text);
+                AbsentDaysZ = float.Parse(DaysAbsentText.Text);
+                HolidaysZ = float.Parse(HolidaysTakenText.Text);
+                OverallAttendanceZ = DateRangeZ - (LeavesZ + AbsentDaysZ + HolidaysZ);
+                OverallAttendanceText.Text = OverallAttendanceZ.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Error While Calculating Attendance ! " );
+            }
+
         }
+
+        private void DateRangeText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
     
 }

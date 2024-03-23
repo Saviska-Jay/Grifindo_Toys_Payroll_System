@@ -89,8 +89,10 @@
             this.label25 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.CalculateAttendance = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +138,7 @@
             this.DateRangeText.Name = "DateRangeText";
             this.DateRangeText.Size = new System.Drawing.Size(128, 26);
             this.DateRangeText.TabIndex = 14;
+            this.DateRangeText.TextChanged += new System.EventHandler(this.DateRangeText_TextChanged);
             // 
             // NoOfLeavesForAYearText
             // 
@@ -446,7 +449,7 @@
             // OverallAttendanceText
             // 
             this.OverallAttendanceText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverallAttendanceText.Location = new System.Drawing.Point(214, 627);
+            this.OverallAttendanceText.Location = new System.Drawing.Point(190, 210);
             this.OverallAttendanceText.Margin = new System.Windows.Forms.Padding(4);
             this.OverallAttendanceText.Name = "OverallAttendanceText";
             this.OverallAttendanceText.Size = new System.Drawing.Size(142, 26);
@@ -458,7 +461,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(34, 594);
+            this.label14.Location = new System.Drawing.Point(10, 39);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 18);
@@ -468,7 +471,7 @@
             // OTHoursText
             // 
             this.OTHoursText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OTHoursText.Location = new System.Drawing.Point(214, 592);
+            this.OTHoursText.Location = new System.Drawing.Point(190, 37);
             this.OTHoursText.Margin = new System.Windows.Forms.Padding(4);
             this.OTHoursText.Name = "OTHoursText";
             this.OTHoursText.Size = new System.Drawing.Size(142, 26);
@@ -480,7 +483,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(34, 489);
+            this.label15.Location = new System.Drawing.Point(34, 499);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(128, 18);
@@ -490,7 +493,7 @@
             // HolidaysTakenText
             // 
             this.HolidaysTakenText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HolidaysTakenText.Location = new System.Drawing.Point(214, 557);
+            this.HolidaysTakenText.Location = new System.Drawing.Point(214, 567);
             this.HolidaysTakenText.Margin = new System.Windows.Forms.Padding(4);
             this.HolidaysTakenText.Name = "HolidaysTakenText";
             this.HolidaysTakenText.Size = new System.Drawing.Size(142, 26);
@@ -502,7 +505,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(34, 524);
+            this.label16.Location = new System.Drawing.Point(34, 534);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(118, 18);
@@ -512,7 +515,7 @@
             // LeavesTakenText
             // 
             this.LeavesTakenText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeavesTakenText.Location = new System.Drawing.Point(214, 487);
+            this.LeavesTakenText.Location = new System.Drawing.Point(214, 497);
             this.LeavesTakenText.Margin = new System.Windows.Forms.Padding(4);
             this.LeavesTakenText.Name = "LeavesTakenText";
             this.LeavesTakenText.Size = new System.Drawing.Size(142, 26);
@@ -524,7 +527,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(34, 559);
+            this.label17.Location = new System.Drawing.Point(34, 569);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(138, 18);
@@ -537,7 +540,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(34, 629);
+            this.label18.Location = new System.Drawing.Point(10, 212);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(172, 18);
@@ -547,7 +550,7 @@
             // DaysAbsentText
             // 
             this.DaysAbsentText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DaysAbsentText.Location = new System.Drawing.Point(214, 522);
+            this.DaysAbsentText.Location = new System.Drawing.Point(214, 532);
             this.DaysAbsentText.Margin = new System.Windows.Forms.Padding(4);
             this.DaysAbsentText.Name = "DaysAbsentText";
             this.DaysAbsentText.Size = new System.Drawing.Size(142, 26);
@@ -556,11 +559,16 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.CalculateAttendance);
+            this.groupBox3.Controls.Add(this.OverallAttendanceText);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.OTHoursText);
             this.groupBox3.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.groupBox3.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox3.Location = new System.Drawing.Point(24, 444);
+            this.groupBox3.Location = new System.Drawing.Point(24, 425);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(346, 227);
+            this.groupBox3.Size = new System.Drawing.Size(346, 246);
             this.groupBox3.TabIndex = 46;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enter Attendance Information ";
@@ -579,9 +587,9 @@
             this.groupBox4.Controls.Add(this.OTText);
             this.groupBox4.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.groupBox4.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox4.Location = new System.Drawing.Point(397, 444);
+            this.groupBox4.Location = new System.Drawing.Point(397, 425);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(346, 227);
+            this.groupBox4.Size = new System.Drawing.Size(346, 246);
             this.groupBox4.TabIndex = 46;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Calculate The Salary ";
@@ -593,7 +601,7 @@
             this.SalaryCalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SalaryCalculateButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.SalaryCalculateButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.SalaryCalculateButton.Location = new System.Drawing.Point(58, 37);
+            this.SalaryCalculateButton.Location = new System.Drawing.Point(64, 35);
             this.SalaryCalculateButton.Name = "SalaryCalculateButton";
             this.SalaryCalculateButton.Size = new System.Drawing.Size(231, 26);
             this.SalaryCalculateButton.TabIndex = 38;
@@ -604,7 +612,7 @@
             // GrossPayText
             // 
             this.GrossPayText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrossPayText.Location = new System.Drawing.Point(197, 183);
+            this.GrossPayText.Location = new System.Drawing.Point(197, 198);
             this.GrossPayText.Margin = new System.Windows.Forms.Padding(4);
             this.GrossPayText.Name = "GrossPayText";
             this.GrossPayText.Size = new System.Drawing.Size(142, 26);
@@ -616,7 +624,7 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(17, 150);
+            this.label19.Location = new System.Drawing.Point(17, 165);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(73, 18);
@@ -629,7 +637,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(17, 185);
+            this.label22.Location = new System.Drawing.Point(17, 200);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 18);
@@ -639,7 +647,7 @@
             // BaseSalaryText
             // 
             this.BaseSalaryText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaseSalaryText.Location = new System.Drawing.Point(197, 78);
+            this.BaseSalaryText.Location = new System.Drawing.Point(197, 93);
             this.BaseSalaryText.Margin = new System.Windows.Forms.Padding(4);
             this.BaseSalaryText.Name = "BaseSalaryText";
             this.BaseSalaryText.Size = new System.Drawing.Size(142, 26);
@@ -651,7 +659,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(17, 115);
+            this.label20.Location = new System.Drawing.Point(17, 130);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(40, 18);
@@ -661,7 +669,7 @@
             // NoPayText
             // 
             this.NoPayText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoPayText.Location = new System.Drawing.Point(197, 148);
+            this.NoPayText.Location = new System.Drawing.Point(197, 163);
             this.NoPayText.Margin = new System.Windows.Forms.Padding(4);
             this.NoPayText.Name = "NoPayText";
             this.NoPayText.Size = new System.Drawing.Size(142, 26);
@@ -673,7 +681,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(17, 80);
+            this.label21.Location = new System.Drawing.Point(17, 95);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(113, 18);
@@ -683,7 +691,7 @@
             // OTText
             // 
             this.OTText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OTText.Location = new System.Drawing.Point(197, 113);
+            this.OTText.Location = new System.Drawing.Point(197, 128);
             this.OTText.Margin = new System.Windows.Forms.Padding(4);
             this.OTText.Name = "OTText";
             this.OTText.Size = new System.Drawing.Size(142, 26);
@@ -699,9 +707,9 @@
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.groupBox5.ForeColor = System.Drawing.Color.Gray;
-            this.groupBox5.Location = new System.Drawing.Point(767, 444);
+            this.groupBox5.Location = new System.Drawing.Point(767, 425);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(298, 227);
+            this.groupBox5.Size = new System.Drawing.Size(298, 246);
             this.groupBox5.TabIndex = 46;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Save Salary Information ";
@@ -813,6 +821,21 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // CalculateAttendance
+            // 
+            this.CalculateAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.CalculateAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CalculateAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CalculateAttendance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.CalculateAttendance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CalculateAttendance.Location = new System.Drawing.Point(57, 175);
+            this.CalculateAttendance.Name = "CalculateAttendance";
+            this.CalculateAttendance.Size = new System.Drawing.Size(231, 26);
+            this.CalculateAttendance.TabIndex = 46;
+            this.CalculateAttendance.Text = "Calculate The Attendance";
+            this.CalculateAttendance.UseVisualStyleBackColor = false;
+            this.CalculateAttendance.Click += new System.EventHandler(this.CalculateAttendance_Click);
+            // 
             // SalaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -822,10 +845,6 @@
             this.ClientSize = new System.Drawing.Size(1084, 681);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.OverallAttendanceText);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.OTHoursText);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.DaysAbsentText);
@@ -863,6 +882,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -934,5 +955,6 @@
         private System.Windows.Forms.Button ConfirmSaveSalaryButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button CalculateAttendance;
     }
 }
