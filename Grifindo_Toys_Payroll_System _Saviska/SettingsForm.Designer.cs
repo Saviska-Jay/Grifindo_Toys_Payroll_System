@@ -34,16 +34,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.NoOfLeavesForAYearText = new System.Windows.Forms.TextBox();
             this.SalaryCycleStartDatePicker = new System.Windows.Forms.DateTimePicker();
             this.SalaryCycleEndDatePicker = new System.Windows.Forms.DateTimePicker();
             this.DateRangeText = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DateCalculateButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.SaveSettingsButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.NoOfLeavesForAYearNnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NoOfLeavesForAYearNnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -88,7 +90,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 235);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(9, 161);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(216, 18);
@@ -100,54 +103,53 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 277);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(9, 120);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(262, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Date Range For A Salary Cycle :";
             // 
-            // NoOfLeavesForAYearText
-            // 
-            this.NoOfLeavesForAYearText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoOfLeavesForAYearText.Location = new System.Drawing.Point(362, 231);
-            this.NoOfLeavesForAYearText.Margin = new System.Windows.Forms.Padding(4);
-            this.NoOfLeavesForAYearText.Name = "NoOfLeavesForAYearText";
-            this.NoOfLeavesForAYearText.Size = new System.Drawing.Size(241, 26);
-            this.NoOfLeavesForAYearText.TabIndex = 7;
-            // 
             // SalaryCycleStartDatePicker
             // 
             this.SalaryCycleStartDatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SalaryCycleStartDatePicker.Location = new System.Drawing.Point(362, 149);
+            this.SalaryCycleStartDatePicker.Location = new System.Drawing.Point(279, 33);
             this.SalaryCycleStartDatePicker.Name = "SalaryCycleStartDatePicker";
             this.SalaryCycleStartDatePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SalaryCycleStartDatePicker.Size = new System.Drawing.Size(241, 20);
+            this.SalaryCycleStartDatePicker.Size = new System.Drawing.Size(241, 26);
             this.SalaryCycleStartDatePicker.TabIndex = 8;
             // 
             // SalaryCycleEndDatePicker
             // 
             this.SalaryCycleEndDatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SalaryCycleEndDatePicker.Location = new System.Drawing.Point(362, 191);
+            this.SalaryCycleEndDatePicker.Location = new System.Drawing.Point(279, 75);
             this.SalaryCycleEndDatePicker.Name = "SalaryCycleEndDatePicker";
             this.SalaryCycleEndDatePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SalaryCycleEndDatePicker.Size = new System.Drawing.Size(241, 20);
+            this.SalaryCycleEndDatePicker.Size = new System.Drawing.Size(241, 26);
             this.SalaryCycleEndDatePicker.TabIndex = 8;
             // 
             // DateRangeText
             // 
             this.DateRangeText.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateRangeText.Location = new System.Drawing.Point(362, 273);
+            this.DateRangeText.Location = new System.Drawing.Point(279, 116);
             this.DateRangeText.Margin = new System.Windows.Forms.Padding(4);
             this.DateRangeText.Name = "DateRangeText";
-            this.DateRangeText.Size = new System.Drawing.Size(241, 26);
+            this.DateRangeText.Size = new System.Drawing.Size(115, 26);
             this.DateRangeText.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.NoOfLeavesForAYearNnumericUpDown);
+            this.groupBox1.Controls.Add(this.DateCalculateButton);
+            this.groupBox1.Controls.Add(this.SalaryCycleEndDatePicker);
             this.groupBox1.Controls.Add(this.ResetButton);
+            this.groupBox1.Controls.Add(this.SalaryCycleStartDatePicker);
             this.groupBox1.Controls.Add(this.SaveSettingsButton);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.DateRangeText);
             this.groupBox1.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.Gray;
             this.groupBox1.Location = new System.Drawing.Point(83, 116);
@@ -156,6 +158,21 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
+            // 
+            // DateCalculateButton
+            // 
+            this.DateCalculateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DateCalculateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DateCalculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DateCalculateButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.DateCalculateButton.ForeColor = System.Drawing.Color.Teal;
+            this.DateCalculateButton.Location = new System.Drawing.Point(401, 116);
+            this.DateCalculateButton.Name = "DateCalculateButton";
+            this.DateCalculateButton.Size = new System.Drawing.Size(119, 26);
+            this.DateCalculateButton.TabIndex = 12;
+            this.DateCalculateButton.Text = "Calculate";
+            this.DateCalculateButton.UseVisualStyleBackColor = false;
+            this.DateCalculateButton.Click += new System.EventHandler(this.DateCalculateButton_Click);
             // 
             // ResetButton
             // 
@@ -217,6 +234,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // NoOfLeavesForAYearNnumericUpDown
+            // 
+            this.NoOfLeavesForAYearNnumericUpDown.Location = new System.Drawing.Point(279, 158);
+            this.NoOfLeavesForAYearNnumericUpDown.Name = "NoOfLeavesForAYearNnumericUpDown";
+            this.NoOfLeavesForAYearNnumericUpDown.Size = new System.Drawing.Size(241, 26);
+            this.NoOfLeavesForAYearNnumericUpDown.TabIndex = 51;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,12 +250,6 @@
             this.ClientSize = new System.Drawing.Size(709, 461);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ExitButton);
-            this.Controls.Add(this.SalaryCycleEndDatePicker);
-            this.Controls.Add(this.SalaryCycleStartDatePicker);
-            this.Controls.Add(this.DateRangeText);
-            this.Controls.Add(this.NoOfLeavesForAYearText);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
@@ -245,6 +263,8 @@
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NoOfLeavesForAYearNnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +277,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox NoOfLeavesForAYearText;
         private System.Windows.Forms.DateTimePicker SalaryCycleStartDatePicker;
         private System.Windows.Forms.DateTimePicker SalaryCycleEndDatePicker;
         private System.Windows.Forms.TextBox DateRangeText;
@@ -266,5 +285,7 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Button DateCalculateButton;
+        private System.Windows.Forms.NumericUpDown NoOfLeavesForAYearNnumericUpDown;
     }
 }

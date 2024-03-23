@@ -16,7 +16,7 @@ namespace Grifindo_Toys_Payroll_System__Saviska
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new SettingsForm());
         }
     }
 }

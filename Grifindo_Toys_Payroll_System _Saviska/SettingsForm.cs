@@ -16,7 +16,11 @@ namespace Grifindo_Toys_Payroll_System__Saviska
         public SettingsForm()
         {
             InitializeComponent();
+
+            DateRangeText.ReadOnly = true;
         }
+
+        
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PNEJN8R;Initial Catalog=The_Grifindo_Toys_SMJ;Integrated Security=True");
 
@@ -46,7 +50,7 @@ namespace Grifindo_Toys_Payroll_System__Saviska
             {
                 string SalaryCycleStartDate = SalaryCycleStartDatePicker.Text;
                 string SalaryCycleEndDate = SalaryCycleEndDatePicker.Text;
-                int NoOfLeavesForAYear = int.Parse(NoOfLeavesForAYearText.Text);
+                int NoOfLeavesForAYear = (int)NoOfLeavesForAYearNnumericUpDown.Value;
                 int DateRange = int.Parse(DateRangeText.Text);
                 string SettingsSaveQuery = "Insert Into Settings (SalaryCycleStartDate,SalaryCycleEndDate,NoOfLeavesForAYear,DateRange) Values ('"+SalaryCycleStartDate+"','"+SalaryCycleEndDate+"',"+NoOfLeavesForAYear+","+DateRange+")";
                 SqlCommand cmd = new SqlCommand(SettingsSaveQuery, con);
@@ -85,6 +89,16 @@ namespace Grifindo_Toys_Payroll_System__Saviska
             {
                 con.Close();
             }
+        }
+
+        //Days Calculate Button
+        private void DateCalculateButton_Click(object sender, EventArgs e)
+        {
+            DateTime StartDate = SalaryCycleStartDatePicker.Value;
+            DateTime EndDate = SalaryCycleEndDatePicker.Value;
+            TimeSpan DateRange = EndDate - StartDate;
+            int TotalDays = (int)DateRange.TotalDays;
+            DateRangeText.Text = TotalDays.ToString();
         }
     }
 }
